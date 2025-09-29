@@ -58,6 +58,14 @@
     /* cream border */
 }
 
+.active-link {
+    font-weight: bold;
+    color: #d4af37 !important;
+    /* gold */
+    border-bottom: 2px solid #d4af37;
+}
+
+
 .hero-section {
     position: relative;
     height: 100vh;

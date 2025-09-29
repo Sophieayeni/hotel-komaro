@@ -1,11 +1,38 @@
 // components/DiningAndNightlife.jsx
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Card, Button, Modal, Row, Col } from "react-bootstrap";
 import RestaurantImg from "../../../Assets/images/restaurant.jpeg";
 import LoungeImg from "../../../Assets/images/lounge.jpeg";
 import ClubImg from "../../../Assets/images/club.jpeg";
 
 function DiningAndNightlife() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const entries = Object.fromEntries(formData.entries());
+        console.log("🚀 Form Data Being Sent:", entries);
+
+        emailjs
+            .sendForm(
+                "service_bp4xet8",   // service ID
+                "template_56la915",  // template ID
+                e.target,
+                "4yNmsWromdVAb4a_2"  // public key
+            )
+            .then(
+                (result) => {
+                    console.log("✅ Success:", result.text);
+                    setShowModal(false);
+                },
+                (error) => {
+                    console.error("❌ Error:", error);
+                    alert("Something went wrong.");
+                }
+            );
+    };
+
     const [showModal, setShowModal] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
 
@@ -70,15 +97,16 @@ function DiningAndNightlife() {
                 <Modal.Header closeButton>
                     <Modal.Title>Reserve a Table - {selectedOption?.title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <form>
+                <form onSubmit={handleSubmit}>
+
+                    <Modal.Body>
                         <Row>
                             <Col>
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label">
                                         Full Name
                                     </label>
-                                    <input type="text" className="form-control" id="name" />
+                                    <input type="text" name="fullName" className="form-control" id="name" />
                                 </div>
                             </Col>
                             <Col>
@@ -86,7 +114,7 @@ function DiningAndNightlife() {
                                     <label htmlFor="email" className="form-label">
                                         Email Address
                                     </label>
-                                    <input type="email" className="form-control" id="email" />
+                                    <input type="email" name="email" className="form-control" id="email" />
                                 </div>
                             </Col>
                         </Row>
@@ -96,7 +124,7 @@ function DiningAndNightlife() {
                                     <label htmlFor="phoneNumber" className="form-label">
                                         Phone Number
                                     </label>
-                                    <input type="text" className="form-control" id="phoneNumber" />
+                                    <input type="text" name="phoneNumber" className="form-control" id="phoneNumber" />
                                 </div>
                             </Col>
                             <Col>
@@ -104,7 +132,7 @@ function DiningAndNightlife() {
                                     <label htmlFor="guests" className="form-label">
                                         No of Guests
                                     </label>
-                                    <input type="number" className="form-control" id="guests" />
+                                    <input type="number" name="guests" className="form-control" id="guests" />
                                 </div>
                             </Col>
                         </Row>
@@ -114,7 +142,7 @@ function DiningAndNightlife() {
                                     <label htmlFor="date" className="form-label">
                                         Date
                                     </label>
-                                    <input type="date" className="form-control" id="date" />
+                                    <input type="date" name="date" className="form-control" id="date" />
                                 </div>
                             </Col>
                             <Col>
@@ -122,23 +150,25 @@ function DiningAndNightlife() {
                                     <label htmlFor="time" className="form-label">
                                         Time
                                     </label>
-                                    <input type="time" className="form-control" id="time" />
+                                    <input type="time" name="time" className="form-control" id="time" />
                                 </div>
                             </Col>
+                            <input type="text" name="tableTitle" value={selectedOption?.title} readOnly hidden />
+
                         </Row>
-                    </form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button className="bg-black text-color-2 border-0" onClick={handleClose}>
-                        Cancel
-                    </Button>
-                    <Button
-                        className="bg-color-1 text-color-1 border-0"
-                        onClick={handleClose}
-                    >
-                        Confirm
-                    </Button>
-                </Modal.Footer>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button className="bg-black text-color-2 border-0 px-4 py-2" onClick={handleClose}>
+                            Cancel
+                        </Button>
+                        <Button
+                            className="bg-color-1 text-color-1 border-0 px-4 py-2"
+                            type="submit"
+                        >
+                            Confirm
+                        </Button>
+                    </Modal.Footer>
+                </form>
             </Modal>
         </div>
     );
