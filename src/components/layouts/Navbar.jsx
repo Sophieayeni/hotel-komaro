@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from "../../Assets/images/HOTEL LOGO.png";
 import { Navbar, Nav } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 
 function Navigationbar() {
     return (
@@ -35,12 +36,15 @@ function Navigationbar() {
                         Dining & Nightlife
                     </NavLink>
 
-                    {/* <NavLink
+                    {/* Contact Us link */}
+                    <HashLink
+                        smooth
                         to="/#contact-us"
-                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        className="nav-link mx-5"
+                        scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                     >
                         Contact Us
-                    </NavLink> */}
+                    </HashLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

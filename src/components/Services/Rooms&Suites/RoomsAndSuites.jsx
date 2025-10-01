@@ -130,21 +130,32 @@ function RoomsAndSuites() {
   return (
     <div className="container mt-5 py-3">
       <h1 className="text-center mt-5 py-3">Rooms & Suites</h1>
-
       <div className="row">
         {rooms.map((room) => (
           <div key={room.id} className="col-md-4 mb-4">
-            <Card className="shadow-sm h-100">
-              {/* Room Carousel */}
-              <Carousel>
+            <Card className="shadow-sm h-100 position-relative overflow-hidden">
+              <div
+                className="blur-bg position-absolute w-100"
+                style={{
+                  top: 0,
+                  left: 0,
+                  height: "250px", // same as carousel image height
+                  backgroundImage: `url(${room.images[0]})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "blur(15px)",
+                  zIndex: 0,
+                }}
+              ></div>
+              <Carousel className="position-relative" style={{ zIndex: 1 }}>
                 {room.images.map((img, index) => (
                   <Carousel.Item key={index}>
                     <Card.Img
                       variant="top"
                       src={img}
                       style={{
-                        objectFit: "contain", // show full image
-                        maxHeight: "250px",   // adjust to your preferred size
+                        objectFit: "contain",
+                        maxHeight: "250px",
                         width: "100%",
                       }}
                     />

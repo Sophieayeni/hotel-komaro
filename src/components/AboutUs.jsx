@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import aboutUs from "../Assets/images/About us.JPG";
-// import aboutUs2 from "../Assets/images/About us 2.JPG";
-import aboutUs3 from "../Assets/images/About us 3.JPG";
-// import aboutUs4 from "../Assets/images/About us 4.JPG";
+import aboutUs from "../Assets/images/About us.JPG";
+import aboutUs2 from "../Assets/images/About us 2.JPG";
+import aboutUs3 from "../Assets/images/3-bed-6.JPG";
+import aboutUs4 from "../Assets/images/About us 3.JPG";
 
 function AboutUs() {
     return (
@@ -21,13 +21,38 @@ function AboutUs() {
                 </div>
                 <Row className="align-items-center mb-5">
                     <Col md={6}>
-
-                        <img
-                            src={aboutUs3}
-                            alt="Hotel Reception"
-                            className="img-fluid rounded about-img"
-                            style={{ width: "100%", maxHeight: "600px", objectFit: "cover" }} />
-
+                        <Row>
+                            <Col md={6} className="mt-3">
+                                <img
+                                    src={aboutUs}
+                                    alt="Hotel Reception"
+                                    className="img-fluid rounded about-img"
+                                    style={{ width: "100%", maxHeight: "300px", objectFit: "contain" }} />
+                            </Col>
+                            <Col md={6} className="mt-3">
+                                <img
+                                    src={aboutUs2}
+                                    alt="Hotel Reception"
+                                    className="img-fluid rounded about-img"
+                                    style={{ width: "100%", maxHeight: "300px", objectFit: "cover" }} />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={6} className="mt-3">
+                                <img
+                                    src={aboutUs3}
+                                    alt="Hotel Reception"
+                                    className="img-fluid rounded about-img"
+                                    style={{ width: "100%", maxHeight: "300px", objectFit: "cover" }} />
+                            </Col>
+                            <Col md={6} className="mt-3">
+                                <img
+                                    src={aboutUs4}
+                                    alt="Hotel Reception"
+                                    className="img-fluid rounded about-img"
+                                    style={{ width: "100%", maxHeight: "300px", objectFit: "contain" }} />
+                            </Col>
+                        </Row>
                     </Col>
                     <Col md={6}>
                         <div>
