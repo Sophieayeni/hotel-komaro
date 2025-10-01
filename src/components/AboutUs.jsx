@@ -1,9 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import aboutUs from "../Assets/images/About us.JPG";
-import aboutUs2 from "../Assets/images/About us 2.JPG";
-import aboutUs3 from "../Assets/images/3-bed-6.JPG";
-import aboutUs4 from "../Assets/images/About us 3.JPG";
+
 
 function AboutUs() {
     return (
