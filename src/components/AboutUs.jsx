@@ -23,9 +23,9 @@ function AboutUs() {
                             src={aboutUs}
                             alt="Hotel Reception"
                             className="img-fluid rounded about-img"
-                            style={{ width: "100%", maxHeight: "450px", objectFit: "cover" }} />
+                            style={{ width: "100%", maxHeight: "500px", objectFit: "cover" }} />
                     </Col>
-                    <Col md={6}>
+                    <Col md={6} className="mt-4">
                         <div>
                             <h4 className="text-color-3 fw-bold">✨ Our Story</h4>
                             <p>

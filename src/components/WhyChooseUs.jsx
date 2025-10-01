@@ -4,7 +4,7 @@ import { FaBed, FaUtensils, FaGlassCheers, FaCalendarAlt } from 'react-icons/fa'
 
 function WhyChooseUs() {
     return (
-        <div className="Bg-color text-center py-5">
+        <div className="Bg-color text-center py-3">
             <Container>
                 <h1 className="fw-bold text-color-1 mb-3">Why Choose Komaro</h1>
                 <i className="text-muted">“A Destination Beyond Stays”</i>
