@@ -17,7 +17,7 @@ function Footer() {
 
                     {/* Social Media Icons */}
                     <div className="d-flex gap-3 justify-content-center">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                        <a href="https://www.facebook.com/profile.php?id=61581065097067&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaFacebook size={24} />
                         </a>
                         <a href="https://www.tiktok.com/@hotelkomaro?_t=ZS-90BTRO3OOGa&_r=1" target="_blank" rel="noopener noreferrer" className="text-color-2">

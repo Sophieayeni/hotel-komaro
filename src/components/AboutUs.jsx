@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Reception from "../Assets/images/Hotel reception.jpeg";
-import aboutUs from "../Assets/images/About us.JPG";
-import aboutUs2 from "../Assets/images/About us 2.JPG";
+// import aboutUs from "../Assets/images/About us.JPG";
+// import aboutUs2 from "../Assets/images/About us 2.JPG";
 import aboutUs3 from "../Assets/images/About us 3.JPG";
-import aboutUs4 from "../Assets/images/About us 4.JPG";
+// import aboutUs4 from "../Assets/images/About us 4.JPG";
 
 function AboutUs() {
     return (
