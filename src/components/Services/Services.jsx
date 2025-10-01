@@ -123,7 +123,7 @@ function Services() {
                                     Dining & Nightlife
                                 </Card.Title>
                                 <Card.Text className="mt-2 text-color-2">
-                                    Enjoy gourmet meals prepared by top chefs in elegant settings.
+                                    Sip, Savor, and Celebrate
                                 </Card.Text>
                             </div>
                         </Card.ImgOverlay>

@@ -3,6 +3,7 @@ import Home from './Home';
 import AboutUs from './AboutUs';
 import Services from './Services/Services';
 import ContactUs from './ContactUs';
+import WhyChooseUs from './WhyChooseUs';
 
 function LandingPage() {
     return (
@@ -10,6 +11,9 @@ function LandingPage() {
             <Home />
             <div id="about-us">
                 <AboutUs />
+            </div>
+            <div id="why-choose-us">
+                <WhyChooseUs />
             </div>
             <div id="services">
                 <Services />

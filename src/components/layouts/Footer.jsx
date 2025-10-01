@@ -54,8 +54,15 @@ function Footer() {
                         <h5>Help & Support</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <Link to="/faq" className="text-decoration-none text-color-2">FAQ</Link>
+                                <Link
+                                    to="/faq"
+                                    className="text-decoration-none text-color-2"
+                                    onClick={() => window.scrollTo(0, 0)}
+                                >
+                                    FAQ
+                                </Link>
                             </li>
+
                             <li>
                                 <Link to="/#contact-us" className="text-decoration-none text-color-2">Contact Us</Link>
                             </li>

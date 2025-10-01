@@ -7,19 +7,20 @@ import { Row, Col } from 'react-bootstrap';
 function ContactUs() {
     return (
         <div className='text-center my-5'>
-            <h1 className='text-center my-5 fw-bold text-color-1'>Contact Us</h1>
+            <h1 className='text-center mt-5 fw-bold text-color-1'>Contact Us</h1>
+            <h3 className='text-center text-color-3'>Let’s Make It Happen</h3>
 
 
             <Row className="mt-5 text-center">
                 <Col>
                     <a
-                        href="https://maps.google.com/?q=Effurun GRA, Warri, Delta State, Nigeria"
+                        href="https://maps.google.com/?q=Plot 46 Mabiaku link GRA, Warri, Delta State, Nigeria"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-decoration-none text-dark"
                     >
                         <MdLocationOn className="display-3 m-3" />
-                        <p className="mt-3">Effurun GRA, Warri, Delta State, Nigeria</p>
+                        <p className="mt-3">Plot 46 Mabiaku link GRA, Warri, Delta State, Nigeria</p>
                     </a>
                 </Col>
 
