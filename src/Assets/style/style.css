@@ -65,36 +65,37 @@
     border-bottom: 2px solid #d4af37;
 }
 
-
 .hero-section {
     position: relative;
+    width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Background with blur */
-.hero-section::before {
-    content: "";
+.hero-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../images/hotel home 2.jpeg");
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px);
-    /* 👈 adjust this number until it looks right */
-    transform: scale(1.1);
-    /* avoids sharp edges from blur */
+    object-fit: cover;
     z-index: -2;
+    filter: blur(3px);
+    transform: scale(1.1);
 }
 
-/* Dark overlay */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 40%;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -103,7 +104,6 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
     z-index: -1;
-    /* 👈 must be above ::before but behind text */
 }
 
 /* Text styling */
@@ -113,7 +113,6 @@
     padding: 0 20px;
     margin-top: 150px;
     z-index: 1;
-    /* 👈 keeps text on top */
 }
 
 .hero-text h1 {
@@ -208,6 +207,7 @@
 .bg-color-1 {
     background-color: #f5f5dc;
 }
+
 
 .text-color-1 {
     color: black;

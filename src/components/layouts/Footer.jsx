@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaTiktok, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Logo from "../../Assets/images/HOTEL LOGO.png";
 import { Row, Col } from 'react-bootstrap';
 
@@ -20,13 +20,13 @@ function Footer() {
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaFacebook size={24} />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-color-2">
-                            <FaTwitter size={24} />
+                        <a href="https://www.tiktok.com/@hotelkomaro?_t=ZS-90BTRO3OOGa&_r=1" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                            <FaTiktok size={24} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                        <a href="https://www.instagram.com/hotel.komaro?igsh=ZHc1cXozNWpiZjR6" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaInstagram size={24} />
                         </a>
-                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                        <a href="https://wa.me/2348149662192" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaWhatsapp size={24} />
                         </a>
                     </div>

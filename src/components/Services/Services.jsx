@@ -10,11 +10,17 @@ import Spa from "../../Assets/images/Hotel spa.jpeg";
 function Services() {
     const navigate = useNavigate();
 
+    // State for modals
     const [showEventModal, setShowEventModal] = useState(false);
+    const [showLessonModal, setShowLessonModal] = useState(false);
 
     const handleCloseEventModal = () => setShowEventModal(false);
     const handleOpenEventModal = () => setShowEventModal(true);
 
+    const handleCloseLessonModal = () => setShowLessonModal(false);
+    const handleOpenLessonModal = () => setShowLessonModal(true);
+
+    // Event form submit
     const handleEventSubmit = (e) => {
         e.preventDefault();
 
@@ -37,11 +43,34 @@ function Services() {
             );
     };
 
+    // Swimming lesson form submit
+    const handleLessonSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_zpz27eh",   // replace with your EmailJS service ID
+                "template_v4xo9js",   // replace with your lesson template ID
+                e.target,
+                "oPO7mCPAnNyeOEUKL"  // your public key
+            )
+            .then(
+                (result) => {
+                    console.log("✅ Success:", result.text);
+                    setShowLessonModal(false);
+                },
+                (error) => {
+                    console.error("❌ Error:", error.text);
+                    alert("Something went wrong.");
+                }
+            );
+    };
+
     return (
         <div>
             <h1 className="text-center my-5 fw-bold text-color-1">Our Services</h1>
 
-            {/* Your existing service cards */}
+            {/* First row of service cards */}
             <Row className="mx-5 text-center">
                 <Col xs={12} md={6} className="mb-4">
                     <Card className="custom-card text-white border-0">
@@ -102,6 +131,7 @@ function Services() {
                 </Col>
             </Row>
 
+            {/* Second row of service cards */}
             <Row className="mx-5 text-center">
                 <Col xs={12} md={6} className="mb-4">
                     <Card className="custom-card text-white border-0">
@@ -110,14 +140,17 @@ function Services() {
                         </div>
                         <Card.ImgOverlay className="d-flex flex-column justify-content-between">
                             <div className="button-container">
-                                <Button className="services-btns">Book Session</Button>
+                                <Button className="services-btns" onClick={handleOpenLessonModal}>
+                                    Join Lessons
+                                </Button>
                             </div>
                             <div className="text-start bottom-text mt-5">
                                 <Card.Title className="fw-bold mt-3 text-color-3 fs-3">
-                                    Spa & Wellness
+                                    Swimming Pool & Lessons
                                 </Card.Title>
                                 <Card.Text className="mt-2 text-color-2">
-                                    Relax with luxury spa treatments and wellness facilities.
+                                    Dive into relaxation or learn to swim with professional instructors in
+                                    our modern pool.
                                 </Card.Text>
                             </div>
                         </Card.ImgOverlay>
@@ -147,6 +180,57 @@ function Services() {
                     </Card>
                 </Col>
             </Row>
+
+            {/* Join Lessons Modal */}
+            <Modal show={showLessonModal} onHide={handleCloseLessonModal} centered className="p-5">
+                <Modal.Header closeButton>
+                    <Modal.Title>Join Swimming Lessons</Modal.Title>
+                </Modal.Header>
+                <form onSubmit={handleLessonSubmit}>
+                    <Modal.Body>
+                        <Row>
+                            <Col>
+                                <div className="mb-3">
+                                    <label className="form-label">Full Name</label>
+                                    <input type="text" name="fullName" className="form-control" required />
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className="mb-3">
+                                    <label className="form-label">Email</label>
+                                    <input type="email" name="email" className="form-control" required />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <div className="mb-3">
+                                    <label className="form-label">Phone Number</label>
+                                    <input type="text" name="phoneNumber" className="form-control" required />
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className="mb-3">
+                                    <label className="form-label">Lesson Type</label>
+                                    <select name="lessonType" className="form-control" required>
+                                        <option value="">Select Lesson Type</option>
+                                        <option value="Private">Private Lesson</option>
+                                        <option value="Group">Group Lesson</option>
+                                    </select>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button className="bg-black text-color-2 border-0 px-4 py-2" onClick={handleCloseLessonModal}>
+                            Cancel
+                        </Button>
+                        <Button type="submit" className="bg-color-1 text-color-1 border-0 px-4 py-2">
+                            Submit
+                        </Button>
+                    </Modal.Footer>
+                </form>
+            </Modal>
 
             {/* Plan Event Modal */}
             <Modal show={showEventModal} onHide={handleCloseEventModal} centered className="p-5">

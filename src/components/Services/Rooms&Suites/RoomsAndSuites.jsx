@@ -4,21 +4,50 @@ import emailjs from "@emailjs/browser";
 import { Card, Button, Modal, Carousel, Row, Col } from "react-bootstrap";
 
 // Import images
-import DuplexImg from "../../../Assets/images/duplex.jpeg";
-import duplex1 from "../../../Assets/images/duplex-1.jpeg";
-import duplex2 from "../../../Assets/images/duplex-2.jpeg";
-import duplex3 from "../../../Assets/images/duplex-3.jpeg";
-import duplex4 from "../../../Assets/images/duplex-4.jpeg";
-import duplex5 from "../../../Assets/images/duplex-5.jpeg";
-import duplex6 from "../../../Assets/images/duplex-6.jpeg";
-import duplex7 from "../../../Assets/images/duplex-7.jpeg";
-import duplex8 from "../../../Assets/images/duplex-8.jpeg";
-import duplex9 from "../../../Assets/images/duplex-9.jpeg";
-import duplex10 from "../../../Assets/images/duplex-10.jpeg";
-import OneBedroomImg from "../../../Assets/images/one bedroom.jpeg";
-import SignatureImg from "../../../Assets/images/signature suite.jpeg";
-import ThreeBedroomImg from "../../../Assets/images/three bedroom.jpeg";
-import StudioImg from "../../../Assets/images/studio apartment.jpeg";
+import duplex1 from "../../../Assets/images/duplex-1.JPG";
+import duplex2 from "../../../Assets/images/duplex-2.JPG";
+import duplex3 from "../../../Assets/images/duplex-3.JPG";
+import duplex4 from "../../../Assets/images/duplex-4.JPG";
+import duplex5 from "../../../Assets/images/duplex-5.JPG";
+import duplex6 from "../../../Assets/images/duplex-6.JPG";
+import duplex7 from "../../../Assets/images/duplex-7.JPG";
+import duplex8 from "../../../Assets/images/duplex-8.JPG";
+import duplex9 from "../../../Assets/images/duplex-9.JPG";
+import duplex10 from "../../../Assets/images/duplex-10.JPG";
+import onebed1 from "../../../Assets/images/1-bed-1.JPG";
+import onebed2 from "../../../Assets/images/1-bed-2.JPG";
+import onebed3 from "../../../Assets/images/1-bed-3.JPG";
+import onebed4 from "../../../Assets/images/1-bed-4.JPG";
+import onebed5 from "../../../Assets/images/1-bed-5.JPG";
+import onebed6 from "../../../Assets/images/1-bed-6.JPG";
+import onebed7 from "../../../Assets/images/1-bed-7.JPG";
+import onebed8 from "../../../Assets/images/1-bed-8.JPG";
+import onebed9 from "../../../Assets/images/1-bed-9.JPG";
+import onebed10 from "../../../Assets/images/1-bed-10.JPG";
+import suite1 from "../../../Assets/images/suite-1.JPG";
+import suite2 from "../../../Assets/images/suite-2.JPG";
+import suite3 from "../../../Assets/images/suite-3.JPG";
+import suite4 from "../../../Assets/images/suite-4.JPG";
+import suite5 from "../../../Assets/images/suite-5.JPG";
+import suite6 from "../../../Assets/images/suite-6.JPG";
+import threebed1 from "../../../Assets/images/3-bed-1.JPG";
+import threebed2 from "../../../Assets/images/3-bed-2.JPG";
+import threebed3 from "../../../Assets/images/3-bed-3.JPG";
+import threebed4 from "../../../Assets/images/3-bed-4.JPG";
+import threebed5 from "../../../Assets/images/3-bed-5.JPG";
+import threebed6 from "../../../Assets/images/3-bed-6.JPG";
+import threebed7 from "../../../Assets/images/3-bed-7.JPG";
+import threebed8 from "../../../Assets/images/3-bed-8.JPG";
+import threebed9 from "../../../Assets/images/3-bed-9.JPG";
+import threebed10 from "../../../Assets/images/3-bed-10.JPG";
+import studio1 from "../../../Assets/images/studio-1.JPG";
+import studio2 from "../../../Assets/images/studio-2.JPG";
+import studio3 from "../../../Assets/images/studio-3.JPG";
+import studio4 from "../../../Assets/images/studio-4.JPG";
+import studio5 from "../../../Assets/images/studio-5.JPG";
+import studio6 from "../../../Assets/images/studio-6.JPG";
+import studio7 from "../../../Assets/images/studio-7.JPG";
+import studio8 from "../../../Assets/images/studio-8.JPG";
 
 function RoomsAndSuites() {
   const [showModal, setShowModal] = useState(false);
@@ -41,25 +70,25 @@ function RoomsAndSuites() {
       id: 2,
       title: "One-Bedroom Suites",
       description: "Sleek and modern, perfect for business or leisure.",
-      images: [OneBedroomImg, OneBedroomImg, OneBedroomImg],
+      images: [onebed1, onebed2, onebed3, onebed4, onebed5, onebed6, onebed7, onebed8, onebed9, onebed10],
     },
     {
       id: 3,
       title: "The Signature Suite",
       description: "Indulgence redefined with premium amenities.",
-      images: [SignatureImg, SignatureImg, SignatureImg],
+      images: [suite1, suite2, suite3, suite4, suite5, suite6],
     },
     {
       id: 4,
       title: "Three-Bedroom Apartment",
       description: "Spacious living for the ultimate getaway.",
-      images: [ThreeBedroomImg, ThreeBedroomImg, ThreeBedroomImg],
+      images: [threebed1, threebed2, threebed3, threebed4, threebed5, threebed6, threebed7, threebed8, threebed9, threebed10],
     },
     {
       id: 5,
       title: "Studios",
       description: "Compact, stylish, and convenient.",
-      images: [StudioImg, StudioImg, StudioImg],
+      images: [studio1, studio2, studio3, studio4, studio5, studio6, studio7, studio8],
     },
   ];
 
@@ -81,10 +110,10 @@ function RoomsAndSuites() {
 
     emailjs
       .sendForm(
-        "service_bp4xet8", // ✅ replace with your EmailJS service ID
-        "template_8ya3yza", // ✅ replace with your EmailJS template ID
+        "service_fn0jkli", // ✅ replace with your EmailJS service ID
+        "template_4qb8jw5", // ✅ replace with your EmailJS template ID
         e.target,
-        "4yNmsWromdVAb4a_2" // ✅ replace with your EmailJS public key
+        "FCV1rzINVFFPt9J5C" // ✅ replace with your EmailJS public key
       )
       .then(
         (result) => {
@@ -113,8 +142,11 @@ function RoomsAndSuites() {
                     <Card.Img
                       variant="top"
                       src={img}
-                      height={200}
-                      style={{ objectFit: "cover" }}
+                      style={{
+                        objectFit: "contain", // show full image
+                        maxHeight: "250px",   // adjust to your preferred size
+                        width: "100%",
+                      }}
                     />
                   </Carousel.Item>
                 ))}
@@ -136,6 +168,7 @@ function RoomsAndSuites() {
           </div>
         ))}
       </div>
+
 
       {/* Booking Modal */}
       <Modal show={showModal} onHide={handleClose} centered className="p-5">

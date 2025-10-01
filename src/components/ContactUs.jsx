@@ -24,9 +24,9 @@ function ContactUs() {
                 </Col>
 
                 <Col>
-                    <a href="tel:+234XXXXXXXXXX" className="text-decoration-none text-dark">
+                    <a href="tel:+2348149662192" className="text-decoration-none text-dark">
                         <HiPhone className="display-3 m-3" />
-                        <p className="mt-3">+234 XXX XXX XXXX</p>
+                        <p className="mt-3">+234 814 966 2192</p>
                     </a>
                 </Col>
 
