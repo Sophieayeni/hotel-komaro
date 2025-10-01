@@ -10,23 +10,39 @@ function ContactUs() {
             <h1 className='text-center my-5 fw-bold text-color-1'>Contact Us</h1>
 
 
-            <Row className='mt-5'>
+            <Row className="mt-5 text-center">
                 <Col>
-                    <MdLocationOn className='
-                    display-3 m-3' />
-                    <p className='mt-3'> Effurun GRA, Warri, Delta State, Nigeria</p>
+                    <a
+                        href="https://maps.google.com/?q=Effurun GRA, Warri, Delta State, Nigeria"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-decoration-none text-dark"
+                    >
+                        <MdLocationOn className="display-3 m-3" />
+                        <p className="mt-3">Effurun GRA, Warri, Delta State, Nigeria</p>
+                    </a>
                 </Col>
+
                 <Col>
-                    <HiPhone className='
-                    display-3 m-3' />
-                    <p className='mt-3'>+234 XXX XXX XXXX</p>
+                    <a href="tel:+2348149662192" className="text-decoration-none text-dark">
+                        <HiPhone className="display-3 m-3" />
+                        <p className="mt-3">+234 814 966 2192</p>
+                    </a>
                 </Col>
+
                 <Col>
-                    <IoMdMail className='
-                    display-3 m-3' />
-                    <p className='mt-3'>contacthotelkomaro@gmail.com</p>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=contacthotelkomaro@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-decoration-none text-dark"
+                    >
+                        <IoMdMail className="display-3 m-3" />
+                        <p className="mt-3">contacthotelkomaro@gmail.com</p>
+                    </a>
                 </Col>
             </Row>
+
         </div>
     )
 }

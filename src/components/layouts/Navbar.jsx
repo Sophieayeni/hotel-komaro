@@ -1,31 +1,50 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from "../../Assets/images/HOTEL LOGO.png";
-import { Nav, Navbar, NavLink, NavbarBrand } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap';
 
 function Navigationbar() {
     return (
-        <div>
-            <Navbar className="navbar-custom" collapseOnSelect
-                expand="lg"
-                fixed="top">
-                <NavbarBrand href="#home">
-                    <img src={Logo} height="50px" alt="logo" className='mx-5' />{" "}
-                </NavbarBrand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav" >
-                    <Nav className="ms-auto" >
-                        <NavLink href="/" className="nav-link mx-5 ">Home</NavLink>
+        <Navbar className="navbar-custom" collapseOnSelect expand="lg" fixed="top">
+            <Navbar.Brand href="#home">
+                <img src={Logo} height="50px" alt="logo" className="mx-5" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ms-auto">
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                    >
+                        Home
+                    </NavLink>
 
-                        <NavLink href="/rooms-and-suites" className="nav-link mx-5 ">Rooms & Suites</NavLink>
+                    <NavLink
+                        to="/rooms-and-suites"
+                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Rooms & Suites
+                    </NavLink>
 
-                        <NavLink href="/dining-and-nightlife" className="nav-link mx-5 ">Dining & Nightlife</NavLink>
+                    <NavLink
+                        to="/dining-and-nightlife"
+                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Dining & Nightlife
+                    </NavLink>
 
-                        <NavLink href="#contact-us" className="nav-link mx-5 ">Contact Us</NavLink>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        </div>
-    )
+                    {/* <NavLink
+                        to="/#contact-us"
+                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                    >
+                        Contact Us
+                    </NavLink> */}
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    );
 }
 
-export default Navigationbar
+export default Navigationbar;
