@@ -19,10 +19,10 @@ function Footer() {
                         <a href="https://www.facebook.com/profile.php?id=61581065097067" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaFacebook size={24} />
                         </a>
-                        <a href="https://www.tiktok.com/@hotelkomaro" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                        <a href="https://www.tiktok.com/@komarohotel?_t=ZS-90BwnDnCIA4&_r=1" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaTiktok size={24} />
                         </a>
-                        <a href="https://www.instagram.com/hotel.komaro" target="_blank" rel="noopener noreferrer" className="text-color-2">
+                        <a href="https://www.instagram.com/komarohotel_?igsh=bWZqaW5zNzZnM2lx&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-color-2">
                             <FaInstagram size={24} />
                         </a>
                         <a href="https://wa.me/2348149662192" target="_blank" rel="noopener noreferrer" className="text-color-2">
