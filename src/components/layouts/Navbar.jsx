@@ -15,14 +15,14 @@ function Navigationbar() {
                 <Nav className="ms-auto">
                     <NavLink
                         to="/"
-                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        className={({ isActive }) => `nav-link mx-4 ${isActive ? 'active-link' : ''}`}
                     >
                         Home
                     </NavLink>
 
                     <NavLink
                         to="/rooms-and-suites"
-                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        className={({ isActive }) => `nav-link mx-4 ${isActive ? 'active-link' : ''}`}
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         Rooms & Suites
@@ -30,7 +30,7 @@ function Navigationbar() {
 
                     <NavLink
                         to="/dining-and-nightlife"
-                        className={({ isActive }) => `nav-link mx-5 ${isActive ? 'active-link' : ''}`}
+                        className={({ isActive }) => `nav-link mx-4 ${isActive ? 'active-link' : ''}`}
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         Dining & Nightlife
@@ -40,11 +40,19 @@ function Navigationbar() {
                     <HashLink
                         smooth
                         to="/#contact-us"
-                        className="nav-link mx-5"
+                        className="nav-link mx-4"
                         scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                     >
                         Contact Us
                     </HashLink>
+
+                    <NavLink
+                        to="/gallery"
+                        className={({ isActive }) => `nav-link mx-4 ${isActive ? 'active-link' : ''}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                    >
+                        Gallery
+                    </NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

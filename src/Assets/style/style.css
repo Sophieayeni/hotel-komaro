@@ -200,6 +200,68 @@
     /* black text */
 }
 
+.services-btns:focus,
+.services-btns:active {
+    background-color: #1b0d06 !important;
+    color: #f5f5dc !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.cancel-btns {
+    background-color: #1b0d06;
+    color: #f5f5dc;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.cancel-btns:hover {
+    background-color: #f5f5dc;
+    /* cream background */
+    color: #000;
+    /* black text */
+}
+
+.cancel-btns:focus,
+.cancel-btns:active {
+    background-color: #1b0d06 !important;
+    color: #f5f5dc !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.confirm-btns {
+    background-color: #f5f5dc;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.confirm-btns:hover {
+    background-color: #1b0d06;
+    color: #f5f5dc;
+}
+
+.confirm-btns:focus,
+.confirm-btns:active {
+    background-color: #f5f5dc !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 .Bg-color {
     padding: 50px 20px;
 }
@@ -224,4 +286,66 @@
     /* gold - headings / highlights */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     /* adds depth over image */
+}
+
+/* Isolate styles only for Rooms & Suites Nav */
+.rooms-tabs .nav-link {
+    background: white !important;
+    /* remove default bg */
+    color: black !important;
+    /* default text color */
+    border: none !important;
+    /* remove bootstrap borders */
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Hover effect */
+.rooms-tabs .nav-link:hover {
+    color: #c9a84e !important;
+    /* gold hover */
+}
+
+/* Active tab */
+.rooms-tabs .nav-link.active-link {
+    color: #c9a84e !important;
+    /* gold text when active */
+    border-bottom: 2px solid #c9a84e !important;
+    /* gold underline */
+    font-weight: 600;
+}
+
+/* Optional: spacing between tabs */
+.rooms-tabs .nav-item {
+    margin: 0 10px;
+}
+
+.custom-pagination .page-item .page-link {
+    color: #000;
+    /* black text */
+    background-color: #fff;
+    /* white background */
+    border: 1px solid #d4af37;
+    /* gold border */
+    margin: 0 4px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-pagination .page-item .page-link:hover {
+    background-color: #d4af37;
+    /* gold hover */
+    color: #fff;
+    /* white text on hover */
+    border-color: #d4af37;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #000;
+    /* active background black */
+    color: #d4af37;
+    /* gold text */
+    border-color: #000;
 }

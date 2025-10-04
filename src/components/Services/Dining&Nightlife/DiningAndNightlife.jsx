@@ -169,8 +169,8 @@ function DiningAndNightlife() {
                         <input type="text" name="tableTitle" value={selectedOption?.title} readOnly hidden />
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button className="bg-black text-color-2 border-0 px-4 py-2" onClick={handleClose}>Cancel</Button>
-                        <Button type="submit" className="bg-color-1 text-color-1 border-0 px-4 py-2">Confirm</Button>
+                        <Button className="cancel-btns border-0 px-4 py-2" onClick={handleClose}>Cancel</Button>
+                        <Button type="submit" className="confirm-btns border-0 px-4 py-2">Confirm</Button>
                     </Modal.Footer>
                 </form>
             </Modal>

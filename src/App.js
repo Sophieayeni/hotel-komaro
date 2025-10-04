@@ -12,6 +12,8 @@ import LandingPage from "./components/LandingPage";
 import RoomsAndSuites from "./components/Services/Rooms&Suites/RoomsAndSuites";
 import DiningAndNightlife from "./components/Services/Dining&Nightlife/DiningAndNightlife";
 import Faq from "./components/Faq";
+import Reviews from "./components/Reviews";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/contact-us" element={<ContactUs />} />
         <Route exact path="/faq" element={<Layout><Faq /></Layout>} />
+        <Route exact path="/reviews" element={<Layout><Reviews /></Layout>} />
+        <Route exact path="/gallery" element={<Layout><Gallery /></Layout>} />
         <Route exact path="/footer" element={<Footer />} />
       </Routes>
     </React.Fragment>

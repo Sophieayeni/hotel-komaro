@@ -62,6 +62,15 @@ function Footer() {
                                     FAQ
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    to="/reviews"
+                                    className="text-decoration-none text-color-2"
+                                    onClick={() => window.scrollTo(0, 0)}
+                                >
+                                    Testimonials
+                                </Link>
+                            </li>
 
                             <li>
                                 <Link to="/#contact-us" className="text-decoration-none text-color-2">Contact Us</Link>

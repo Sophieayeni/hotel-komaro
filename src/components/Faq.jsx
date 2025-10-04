@@ -2,7 +2,7 @@ import React from 'react'
 
 function Faq() {
     return (
-        <div className="container my-5 py-3">
+        <div className="container my-5 py-3 px-5">
             <h1 className="fw-bold text-color-1 mb-3 mt-5 py-3">
                 🏨 Hotel Komaro – FAQ Section
             </h1>
