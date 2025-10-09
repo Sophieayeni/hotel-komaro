@@ -73,7 +73,14 @@ function Footer() {
                             </li>
 
                             <li>
-                                <Link to="/#contact-us" className="text-decoration-none text-color-2">Contact Us</Link>
+                                <HashLink
+                                    smooth
+                                    className="text-decoration-none text-color-2"
+                                    to="/#contact-us"
+                                    scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                                >
+                                    Contact Us
+                                </HashLink>
                             </li>
                         </ul>
                     </div>
